@@ -3,7 +3,7 @@ const searchButton = document.querySelector(".search-btn");
 const locationButton = document.querySelector(".location-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
-let daynumber =  0;
+let daynumber = 0;
 
 
 const date = new Date().toLocaleDateString();
@@ -22,6 +22,7 @@ const createWeatherCard = (cityName, weatherItem, index, country) => {
             </div>
             <div class="cloudy">
               <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="weather-icon" style="width=20px"/>
+              <span>${weatherItem.weather[0].description}</span>
             </div>
           </div>
           <div class="current-weather-text">Current Weather</div>
@@ -50,10 +51,12 @@ const createWeatherCard = (cityName, weatherItem, index, country) => {
         </div>`;
     } else { // HTML for the other five day forecast card
         return `
-        
         <li class="card">
                     <p>Date: (${weatherItem.dt_txt.split(" ")[0]})</p>
+                    <figure class="cloudy">
                     <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather-icon" style="width: 60px">
+                    <figcaption>${weatherItem.weather[0].description}</figcaption>
+                    </figure>
                     <p>Temp: ${(weatherItem.main.temp - 273.15).toFixed(2)}°C</p>
                     <p>Wind: ${weatherItem.wind.speed} km/h</p>
                     <p>Humidity: ${weatherItem.main.humidity}%</p>

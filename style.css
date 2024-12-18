@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 body {
-  color: white;
+  color: rgba(255, 255, 255, 0.74);
   max-height: 100vh;
 }
 button {
@@ -21,6 +21,9 @@ button {
   background-repeat: no-repeat;
   background-size: cover;
 }
+img {
+  display: block;
+}
 
 .header {
   display: flex;
@@ -32,7 +35,7 @@ button {
 
 .dashboard {
   font-size: 30px;
-  color: rgba(255, 255, 255, 0.863);
+  color: #28a745;
 }
 
 /* Current weather styling */
@@ -109,6 +112,14 @@ button {
 }
 .bi-cloud-haze2 {
   font-size: 35px;
+  color: rgba(255, 255, 255, 0.781);;
+}
+.cloudy {
+  display: flex;
+  align-items: center;
+  color: #28a745;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .weather {
@@ -150,6 +161,7 @@ button {
   text-align: center;
   font-size: 35px;
   padding-bottom: 10px;
+  color: #28a745;
 }
 .weather-cards {
   width: 100%;
@@ -162,9 +174,11 @@ button {
   font-weight: 300;
 }
 .weather-cards .card {
-  box-shadow: 1px -1px 1px 2px rgba(185, 177, 177, 0.884);
+  box-shadow: 1px -1px 1px 1px rgba(160, 157, 157, 0.884);
   border-radius: 10px;
-  padding: 5px;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.6);
+  color: black;
 }
 .weather-cards .card h3 {
   text-align: center;
