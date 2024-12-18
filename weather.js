@@ -24,7 +24,7 @@ const createWeatherCard = (cityName, weatherItem, index, country) => {
               <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@2x.png" alt="weather-icon" style="width=20px"/>
             </div>
           </div>
-          <div class="current-weather-text">Weather details</div>
+          <div class="current-weather-text">Current Weather</div>
           <div class="current-weather-details">
             <div class="weather temp_min">
               <h3>Temp min</h3>
