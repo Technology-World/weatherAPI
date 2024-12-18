@@ -2,68 +2,105 @@
 <!-- Coding By CodingNepal - www.codingnepalweb.com -->
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <title>Weather App Project JavaScript | CodingNepal</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="weather.js" defer></script>
+    <meta charset="utf-8" />
+    <title>DF Project Weather API</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
-    <h1>Weather Dashboard</h1>
     <div class="container">
-      <div class="weather-input">
-        <h4>Enter a City Name</h4>
-        <input class="city-input" type="text" placeholder="E.g., Ibadan, Ilorin, Lagos">
-        <button class="search-btn">Search</button>
-        <div class="separator"></div>
-        <button class="location-btn">Use Current Location</button>
-      </div>
+      <section class="header">
+        <h2 class="dashboard">Weather Forcast</h2>
+        <div class="weather-input">
+          <input
+            class="city-input"
+            type="text"
+            placeholder="Enter a City Name: E.g., Ibadan, Ilorin, Lagos"
+            required="required"
+          />
+          <button class="search-btn"><i class="bi bi-search"></i></button>
+            <button class="location-btn" title="use current location"><i class="bi bi-geo-alt"></i></button>
+        </div>
+      </section>
+
       <div class="weather-data">
         <div class="current-weather">
           <div class="details">
-            <h2>_______ ( ______ )</h2>
-            <h4>Temperature: __°C</h4>
-            <h4>Wind: __ M/S</h4>
-            <h4>Humidity: __%</h4>
+            <div class="temp">32°</div>
+            <div class="cityname">
+              <h2>Lagos, NG</h2>
+              <h2 id="date"></h2>
+            </div>
+            <div class="cloudy">
+              <i class="bi bi-cloud-haze2"></i>
+            </div>
+          </div>
+          <div class="current-weather-text">Weather details</div>
+          <div class="current-weather-details">
+            <div class="weather temp_min">
+              <h3>Temp min</h3>
+              <p>0°c</p>
+              <i class="bi bi-thermometer-half"></i>
+            </div>
+            <div class="weather temp_max">
+              <h3>Temp max</h3>
+              <p>0°c</p>
+              <i class="bi bi-thermometer-half"></i>
+            </div>
+            <div class="weather wind">
+              <h3>Wind</h3>
+              <p>0km/h <span></span></p>
+              <i class="bi bi-wind"></i>
+            </div>
+            <div class="weather humidity">
+              <h3>Humidity</h3>
+              <p>100%</p>
+              <i class="bi bi-moisture"></i>
+            </div>
           </div>
         </div>
         <div class="days-forecast">
           <h2>5-Day Forecast</h2>
           <ul class="weather-cards">
             <li class="card">
-              <h4>( ______ )</h4>
-              <h4>Temp: __C</h4>
-              <h4>Wind: __ M/S</h4>
-              <h4>Humidity: __%</h4>
+              <h3>Day 1</h3>
+              <p>Date: </p>
+              <p>Temp: 0°c</p>
+              <p>Wind: 0km/h</p>
+              <p>Humidity: 100%</p>
             </li>
             <li class="card">
-              <h4>( ______ )</h4>
-              <h4>Temp: __C</h4>
-              <h4>Wind: __ M/S</h4>
-              <h4>Humidity: __%</h4>
+              <h3>Day 2</h3>
+              <p>Date: </p>
+              <p>Temp: 0°c</p>
+              <p>Wind: 0km/h</p>
+              <p>Humidity: 100%</p>
             </li>
             <li class="card">
-              <h4>( ______ )</h4>
-              <h4>Temp: __C</h4>
-              <h4>Wind: __ M/S</h4>
-              <h4>Humidity: __%</h4>
+              <h3>Day 3</h3>
+              <p>Date: </p>
+              <p>Temp: 0°c</p>
+              <p>Wind: 0km/h</p>
+              <p>Humidity: 100%</p>
             </li>
             <li class="card">
-              <h4>( ______ )</h4>
-              <h4>Temp: __C</h4>
-              <h4>Wind: __ M/S</h4>
-              <h4>Humidity: __%</h4>
+              <h3>Day 4</h3>
+              <p>Date: </p>
+              <p>Temp: 0°c</p>
+              <p>Wind: 0km/h</p>
+              <p>Humidity: 100%</p>
             </li>
             <li class="card">
-              <h4>( ______ )</h4>
-              <h4>Temp: __C</h4>
-              <h4>Wind: __ M/S</h4>
-              <h4>Humidity: __%</h4>
+              <h3>Day 5</h3>
+              <p>Date: </p>
+              <h4>Temp: 0°c</p>
+              <p>Wind: 0km/h</p>
+              <p>Humidity: 100%</p>
             </li>
           </ul>
         </div>
       </div>
     </div>
-    
   </body>
+  <script src="weather.js"></script>
 </html>
