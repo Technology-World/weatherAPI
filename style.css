@@ -7,7 +7,7 @@
 }
 html,body {
   color: rgba(255, 255, 255, 0.74);
-  height: 100vh;
+  background-image: linear-gradient(#28a745, #465b52);
 }
 button {
   outline: none;
@@ -16,9 +16,8 @@ button {
 }
 .container {
   width: 100%;
-  height: 100vh;
-  padding: 0 10px;
-  background-image: url("https://github.com/aditpee/weather-web/blob/main/public/img/bg/mist.jpg?raw=true");
+  padding: 10px 40px;
+  background-image: url("./images/mist.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -30,7 +29,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px;
+  padding: 40px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.74);
 }
 
@@ -50,7 +49,7 @@ img {
   background: rgba(255, 255, 255, 0.863);
   box-shadow: 0px 0px 2px rgba(102, 97, 97, 0.884);
   border: 1px solid transparent;
-  border-radius: 15px;
+  border-radius: 25px;
 }
 
 .city-input {
@@ -68,7 +67,6 @@ img {
 .bi-search,
 .bi-geo-alt {
   font-size: 16px;
-  /* color: white; */
   padding-inline: 5px;
 }
 
@@ -82,22 +80,20 @@ img {
   display: flex;
   justify-content: flex-start;
   gap: 30px;
-  padding: 5px 0;
+  padding: 10px 0;
+  margin: 10px auto;
 }
 .current-weather {
   width: 50%;
   display: flex;
   flex-flow: column nowrap;
-  box-shadow: 3px 0px 0px rgba(190, 185, 185, 0.884);
-  /* justify-content: space-between; */
-  /* align-items: center; */
-  height: auto;
+  box-shadow: 3px 0px 0px rgba(190, 185, 185, 0.5);
 }
 .current-weather-text {
   font-size: 25px;
   color: rgba(255, 255, 255, 0.781);
   text-align: center;
-  padding-bottom: 10px;
+  padding: 10px 0;
   text-decoration: underline;
 }
 .details {
@@ -106,10 +102,12 @@ img {
   padding: 20px 0;
   align-items: center;
   flex-wrap: wrap;
+
 }
 
 .temp {
   font-size: 100px;
+
 }
 .bi-cloud-haze2 {
   font-size: 35px;
@@ -121,6 +119,7 @@ img {
   color: #28a745;
   font-size: 18px;
   font-weight: 700;
+
 }
 
 .weather {

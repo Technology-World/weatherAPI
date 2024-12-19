@@ -54,7 +54,7 @@ const createWeatherCard = (cityName, weatherItem, index, country) => {
         <li class="card">
                     <p>Date: (${weatherItem.dt_txt.split(" ")[0]})</p>
                     <figure class="cloudy">
-                    <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}@4x.png" alt="weather-icon" style="width: 60px">
+                    <img src="https://openweathermap.org/img/wn/${weatherItem.weather[0].icon}.png" alt="weather-icon"/>
                     <figcaption>${weatherItem.weather[0].description}</figcaption>
                     </figure>
                     <p>Temp: ${(weatherItem.main.temp - 273.15).toFixed(2)}°C</p>
@@ -108,7 +108,7 @@ const getCityCoordinates = () => {
         const { lat, lon, name, country } = data[0];
         getWeatherDetails(name, lat, lon, country);
     }).catch(() => {
-        alert("An error occurred while fetching the coordinates!");
+        alert("An error occurred while fetching the coordinates!, please check your connection");
     });
 }
 
