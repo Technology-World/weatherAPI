@@ -3,7 +3,6 @@ const searchButton = document.querySelector(".search-btn");
 const locationButton = document.querySelector(".location-btn");
 const currentWeatherDiv = document.querySelector(".current-weather");
 const weatherCardsDiv = document.querySelector(".weather-cards");
-let daynumber = 0;
 
 
 const date = new Date().toLocaleDateString();
