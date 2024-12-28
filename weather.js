@@ -1,12 +1,12 @@
-const cityInput = document.querySelector(".city-input");
-const searchButton = document.querySelector(".search-btn");
-const locationButton = document.querySelector(".location-btn");
-const currentWeatherDiv = document.querySelector(".current-weather");
-const weatherCardsDiv = document.querySelector(".weather-cards");
+const cityInputEl = document.querySelector(".city-input");
+const searchButtonEl = document.querySelector(".search-btn");
+const locationButtonEl = document.querySelector(".location-btn");
+const currentWeatherEl = document.querySelector(".current-weather");
+const weatherCardsEl = document.querySelector(".weather-cards");
 
 
 const date = new Date().toLocaleDateString();
-document.getElementById("date").textContent = date;
+document.querySelector(".date").textContent = date;
 
 const API_KEY = "0f9675dfcd820379b0a158da28eb0faa"; // API key for OpenWeatherMap API
 
@@ -78,17 +78,17 @@ const getWeatherDetails = (cityName, latitude, longitude, country) => {
         console.log(data);
 
         // Clearing previous weather data
-        cityInput.value = "";
-        currentWeatherDiv.innerHTML = "";
-        weatherCardsDiv.innerHTML = "";
+        cityInputEl.value = "";
+        currentWeatherEl.innerHTML = "";
+        weatherCardsEl.innerHTML = "";
 
         // Creating weather cards and adding them to the DOM
         fiveDaysForecast.forEach((weatherItem, index) => {
             const html = createWeatherCard(cityName, weatherItem, index, country);
             if (index === 0) {
-                currentWeatherDiv.insertAdjacentHTML("beforeend", html);
+                currentWeatherEl.insertAdjacentHTML("beforeend", html);
             } else {
-                weatherCardsDiv.insertAdjacentHTML("beforeend", html);
+                weatherCardsEl.insertAdjacentHTML("beforeend", html);
             }
         });
     }).catch(() => {
@@ -97,7 +97,7 @@ const getWeatherDetails = (cityName, latitude, longitude, country) => {
 }
 
 const getCityCoordinates = () => {
-    const cityName = cityInput.value.trim();
+    const cityName = cityInputEl.value.trim();
     if (cityName === "") return;
     const API_URL = `https://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=1&appid=${API_KEY}`;
 
@@ -128,11 +128,11 @@ const getUserCoordinates = () => {
             if (error.code === error.PERMISSION_DENIED) {
                 alert("Geolocation request denied. Please reset location permission to grant access again.");
             } else {
-                alert("Geolocation request error. Please reset location permission.");
+                alert("Geolocation request error. please check your connection.");
             }
         });
 }
 
-locationButton.addEventListener("click", getUserCoordinates);
-searchButton.addEventListener("click", getCityCoordinates);
-cityInput.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
+locationButtonEl.addEventListener("click", getUserCoordinates);
+searchButtonEl.addEventListener("click", getCityCoordinates);
+cityInputEl.addEventListener("keyup", e => e.key === "Enter" && getCityCoordinates());
