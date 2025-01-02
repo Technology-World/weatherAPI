@@ -16,10 +16,12 @@ button {
 }
 .container {
   width: 100%;
-  padding: 10px 40px;
+  height: 100vh;
+  padding: 10px 50px;
   background-image: url("./images/weather.png");
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 img {
   display: block;
