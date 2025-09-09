@@ -6,6 +6,7 @@ const weatherCardsEl = document.querySelector(".weather-cards");
 const tempEl = document.querySelector(".temp");
 const dateEl = document.querySelector(".date")
 
+document.getElementById('year').textContent = new Date().getFullYear();
 
 const date = new Date().toLocaleDateString();
 dateEl.textContent = date;

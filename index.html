@@ -4,6 +4,8 @@
     <meta charset="utf-8" />
     <title>Weather Forcast API</title>
     <link rel="stylesheet" href="weather.css" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
   <body>
@@ -18,7 +20,9 @@
             required="required"
           />
           <button class="search-btn"><i class="bi bi-search"></i></button>
-            <button class="location-btn" title="use current location"><i class="bi bi-geo-alt"></i></button>
+          <button class="location-btn" title="use current location">
+            <i class="bi bi-geo-alt"></i>
+          </button>
         </div>
       </section>
 
@@ -63,35 +67,35 @@
           <ul class="weather-cards">
             <li class="card">
               <h3>Day 1</h3>
-              <p>Date: </p>
+              <p>Date:</p>
               <p>Temp: 0°c</p>
               <p>Wind: 0km/h</p>
               <p>Humidity: 100%</p>
             </li>
             <li class="card">
               <h3>Day 2</h3>
-              <p>Date: </p>
+              <p>Date:</p>
               <p>Temp: 0°c</p>
               <p>Wind: 0km/h</p>
               <p>Humidity: 100%</p>
             </li>
             <li class="card">
               <h3>Day 3</h3>
-              <p>Date: </p>
+              <p>Date:</p>
               <p>Temp: 0°c</p>
               <p>Wind: 0km/h</p>
               <p>Humidity: 100%</p>
             </li>
             <li class="card">
               <h3>Day 4</h3>
-              <p>Date: </p>
+              <p>Date:</p>
               <p>Temp: 0°c</p>
               <p>Wind: 0km/h</p>
               <p>Humidity: 100%</p>
             </li>
             <li class="card">
               <h3>Day 5</h3>
-              <p>Date: </p>
+              <p>Date:</p>
               <p>Temp: 0°c</p>
               <p>Wind: 0km/h</p>
               <p>Humidity: 100%</p>
@@ -100,6 +104,17 @@
         </div>
       </div>
     </div>
+
+    <footer class="footer">
+      <p>
+        © <span id="year"></span> | All right reserved |
+        <a href="" target="_blank">Adeosun Sodeeq Olalekan</a>
+      </p>
+
+      <p class="portfolio">
+        <a href="">Check more projects</a>
+      </p>
+    </footer>
   </body>
   <script src="weather.js"></script>
 </html>
