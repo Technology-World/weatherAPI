@@ -244,6 +244,7 @@ a:is(:hover, :focus) {
     display: block;
     align-items: right;
     padding: 10px 0px;
+    margin-bottom: 10px;
   }
 
   .weather-input {
