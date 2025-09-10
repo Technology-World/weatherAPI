@@ -7,6 +7,7 @@
 }
 
 html, body {
+  max-width: 100%;
   background-image: linear-gradient(#28a745, #465b52);
   color: white;
 }
@@ -19,12 +20,12 @@ button {
 
 .container {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
   padding: 10px 50px;
   background-image: url("./images/weather.png");
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 img {
@@ -41,6 +42,7 @@ a:is(:hover, :focus) {
 }
 
 .header {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -50,6 +52,7 @@ a:is(:hover, :focus) {
 }
 
 .dashboard {
+  width: 100%;
   font-size: 30px;
   color: rgba(17, 66, 2, 0.801);
 }
@@ -122,12 +125,10 @@ a:is(:hover, :focus) {
   padding: 20px 0;
   align-items: center;
   flex-wrap: wrap;
-
 }
 
 .temp {
   font-size: 100px;
-
 }
 
 .bi-cloud-haze2 {
@@ -139,7 +140,7 @@ a:is(:hover, :focus) {
 .cloudy {
   display: flex;
   align-items: center;
-  color: #28a745;
+  color: blue;
   font-size: 18px;
   font-weight: 700;
 
@@ -223,10 +224,78 @@ a:is(:hover, :focus) {
 .footer {
   width: 100%;
   background-color: green;
-  margin-top: 10px;
-  padding: 10px 30px;
+  padding: 10px;
   text-align: center;
-  display: flex;
-  justify-content: space-between;
   align-items: center;
+}
+
+@media screen and (max-width: 450px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .dashboard {
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .header {
+    display: block;
+    align-items: right;
+    padding: 10px 0px;
+  }
+
+  .weather-input {
+    margin: 0 auto;
+    padding: 5px;
+    width: 100%;
+
+  }
+
+  .city-input {
+    width: 100%;
+  }
+
+  .weather-data {
+    width: 100%;
+    display: block;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .current-weather {
+    width: 100%;
+    box-shadow: none;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  .details {
+    display: block;
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 10px;
+    color: green;
+    border-radius: 10px;
+  }
+
+  .days-forecast {
+    width: 100%;
+  }
+
+  .days-forecast h2 {
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 8px;
+    color: green;
+    border-radius: 10px;
+    margin-bottom: 10px;
+  }
+
+  .weather-cards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
 }
